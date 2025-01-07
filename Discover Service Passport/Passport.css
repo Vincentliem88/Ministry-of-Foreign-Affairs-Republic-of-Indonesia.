@@ -1,0 +1,629 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* General styles */
+body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 17px;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 68px;
+    display: none; /* Akan terlihat jika diisi konten */
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+/* Section */
+section {
+    margin: 20px 0;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #222;
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Source Sans 3', sans-serif;
+    display:block; /* Akan terlihat jika diisi konten */
+}
+
+/* Responsive design */
+@media (max-width : 1239px ){
+    body {
+        font-size: 15px;
+    }
+    header {
+        font-size: 40px;
+        line-height: 50px;
+        padding: 15px;
+    }
+}
+
+/* Styling Utility Bar */
+.utility-bar {
+    background-color: #0071BC; /* Warna biru untuk background */
+    width: 1440px;            /* Lebar 1440px */
+    height: 30px;             /* Tinggi 30px */
+    margin: 0 auto;           /* Pusatkan secara horizontal */
+    display: flex;            /* Gunakan Flexbox */
+    align-items: center;      /* Rata tengah secara vertikal */
+}
+
+/* Styling Utility Content */
+.utility-content {
+    display: flex;            /* Gunakan Flexbox untuk penyusunan horizontal */
+    gap: 20px;                /* Jarak antar item */
+    margin: 0 96px;           /* Margin kiri dan kanan 96px dari utility bar */
+    width: calc(100% - 192px); /* Kurangi margin kiri dan kanan */
+    justify-content: space-between; /* Rata elemen secara horizontal */
+}
+
+/* Styling Utility Items */
+.utility-item {
+    font-family: 'Merriweather', serif; /* Font Merriweather */
+    font-size: 13px;                   /* Ukuran font 13px */
+    line-height: 17px;                 /* Tinggi baris 17px */
+    color: #FFFFFF;                    /* Warna teks putih */
+    text-decoration: none;             /* Hilangkan garis bawah */
+    transition: color 0.3s ease;       /* Efek transisi untuk warna */
+}
+
+/* Hover Effect */
+.utility-item:hover {
+    color: #AEB0B5; /* Warna berubah menjadi #AEB0B5 saat hover */
+}
+
+/* Navigation Bar */
+.navigation-bar {
+    background-color: #FFFFFF; /* Latar belakang putih */
+    width: 1440px;            /* Lebar tetap */
+    height: 81px;             /* Tinggi tetap */
+    margin: 0 auto;           /* Pusatkan secara horizontal */
+    display: flex;            /* Flexbox untuk tata letak */
+    align-items: center;      /* Rata tengah secara vertikal */
+    border-bottom: 1px solid #ddd; /* Garis bawah untuk pemisah */
+}
+
+/* Navigation Content */
+.navigation-content {
+    display: flex;            /* Flexbox */
+    justify-content: space-between; /* Sebar elemen secara horizontal */
+    align-items: center;      /* Rata tengah vertikal */
+    width: 100%;              /* Lebar penuh */
+    padding: 0 96px;          /* Padding kiri-kanan */
+}
+
+/* Logo */
+.nav-logo .logo {
+    height: 60px;             /* Tinggi logo */
+    width: auto;              /* Lebar otomatis sesuai proporsi */
+}
+
+/* Menu Items */
+.nav-menu {
+    display: flex;            /* Flexbox untuk tata letak horizontal */
+    gap: 90px;                /* Jarak antar menu */
+	position: relative
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative; /* Ensure submenu is positioned relative to the parent */
+}
+
+/* Add a hover bridge using a pseudo-element */
+.dropdown::after {
+    content: ''; /* Add an empty pseudo-element */
+    position: absolute;
+    top: 100%; /* Start right below the parent menu item */
+    left: 0;
+    width: 100%; /* Match the width of the parent menu item */
+    height: 22px; /* Extend the hover area downward */
+    background: transparent; /* Invisible background */
+}
+
+/* Submenu hidden by default */
+.submenu {
+    display: none; /* Hide submenu initially */
+    position: absolute; /* Position submenu relative to the parent */
+    top: 163%; /* Maintain the gap below the parent menu */
+    left: 0; /* Align submenu to the left of its parent */
+    background-color: #fff; /* White background for submenu */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 5px; /* Optional rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    z-index: 1000; /* Ensure submenu appears above other elements */
+    padding: 10px 0; /* Add padding inside the submenu */
+    width: 200px; /* Set fixed width for submenu */
+}
+
+/* Submenu items */
+.submenu-item {
+    display: block;
+    padding: 10px 15px; /* Add padding for clickable area */
+    font-size: 14px; /* Adjust font size */
+    color: #333; /* Text color */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Hover effect on submenu items */
+.submenu-item:hover {
+    background-color: #0071BC; /* Highlight background */
+    color: #fff; /* White text for contrast */
+}
+
+/* Show submenu when hovering over dropdown or submenu */
+.dropdown:hover .submenu,
+.submenu:hover {
+    display: block; /* Keep submenu visible on hover */
+}
+
+.nav-item {
+    font-family: 'Merriweather', serif; /* Font Merriweather */
+    font-size: 15px;                    /* Ukuran font */
+    color: #333;                        /* Warna teks */
+    text-decoration: none;              /* Hilangkan garis bawah */
+    padding: 5px 10px;                 /* Area klik lebih besar */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Efek transisi */
+}
+
+.nav-item:hover {
+    color: #0071BC;                     /* Warna teks saat hover */
+    background-color: #f0f0f0;          /* Latar belakang saat hover */
+    border-radius: 5px;                 /* Sedikit radius sudut */
+}
+
+/* Default state for the "Services" link */
+.menu-link {
+    color: #000; /* Black text */
+    text-decoration: none; /* Remove underline */
+    font-size: 15px; /* Optional: Adjust font size if needed */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Hover state for the "Services" link */
+.menu-link:hover {
+    color: #0071BC; /* Blue text when hovered */
+    text-decoration: none; /* Ensure no underline on hover */
+}
+
+/* Search Bar */
+.nav-search {
+    display: flex;            /* Flexbox untuk tata letak horizontal */
+    align-items: center;      /* Rata tengah vertikal */
+}
+
+/* Gaya default untuk search input */
+.search-input {
+    height: 35px;
+    width: 200px;
+    border: 1px solid #ccc; /* Border default abu-abu */
+    border-radius: 5px 0px 0px 5px; /* Hanya radius di kanan */
+    padding: 0 10px; /* Padding internal */
+    font-size: 14px;
+    outline: none; /* Hilangkan outline bawaan browser */
+    transition: border-color 0.3s ease; /* Animasi transisi border */
+}
+
+/* Gaya saat input mendapatkan fokus (diklik) */
+.search-input:focus {
+    border-color: #0071BC; /* Ubah warna border menjadi biru */
+    border-radius: 5px 0px 0px 5px; /* Hilangkan semua radius */
+    box-shadow: none; /* Hilangkan efek bayangan */
+}
+
+.search-button {
+    height: 37px;             /* Tinggi tombol */
+    background-color: #0071BC; /* Warna biru */
+    color: #FFF;              /* Warna teks putih */
+    border: none;             /* Hilangkan border */
+    border-radius: 0 5px 5px 0; /* Radius untuk bagian kanan */
+    padding: 0 15px;          /* Padding kiri-kanan */
+    cursor: pointer;          /* Tampilkan kursor pointer */
+    transition: background-color 0.3s ease; /* Efek transisi */
+}
+
+.search-button:hover {
+    background-color: #205493; /* Warna biru lebih gelap saat hover */
+}
+
+/* Reset margin and padding for body and sections */
+body, section {
+    margin: 0;
+    padding: 0;
+}
+
+
+.appointment-system {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.appointment-header h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.appointment-header h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #aeb0b5;
+    margin-bottom: 50px;
+}
+
+.services h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: left; /* Align text to the left */
+}
+
+
+.service-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.service-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-info {
+    text-align: left;
+}
+
+.service-info h4 {
+    font-size: 16px;
+    color: #0071bc;
+    margin: 0;
+}
+
+.service-info h2 {
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.service-info p {
+    font-size: 14px;
+    margin: 0;
+    color: #555;
+}
+
+.apply-button {
+    background-color: #0071bc;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+    background-color: #112e51;
+}
+
+/* Footer General Styling */
+.footer {
+    background-color: #112e51;
+    color: #ffffff;
+    font-family: 'Source Sans 3', sans-serif;
+    padding: 10px 96px;
+}
+
+/* Footer Top */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+}
+
+/* Footer Icon Styling */
+.footer-icon {
+    width: 82px; /* Default size */
+    height: auto;
+    margin-right: 10px; /* Spacing between icon and text */
+}
+
+.address-icon {
+    width: 82px; /* Custom size for address icon */
+}
+
+.contact-icon {
+    width: 82px; /* Custom size for contact icon */
+}
+
+.clock-icon {
+    width: 82px; /* Custom size for clock icon */
+}
+
+/* Footer Middle */
+.footer-middle {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc; /* Garis bawah */
+    width: 100%; /* Lebar penuh */
+    margin: 0; /* Hilangkan margin */
+}
+
+/* Footer Logo Styling */
+.footer-logo {
+    display: flex; /* Gunakan Flexbox untuk menyusun elemen */
+    flex-direction: column; /* Susunan vertikal: ikon di atas, teks di bawah */
+    align-items: flex-start; /* Semua elemen rata kiri */
+    text-align: left; /* Teks rata kiri */
+    gap: 10px; /* Jarak antara ikon/logo dan teks */
+}
+
+.footer-logo img {
+    height: 60px; /* Tinggi logo 60px */
+    width: auto; /* Lebar menyesuaikan proporsi */
+    align-self: flex-start; /* Tetap sejajar ke kiri */
+    margin: 0; /* Hapus margin tambahan */
+    padding: 0; /* Hapus padding tambahan */
+}
+
+
+.footer-logo p {
+    max-width: 300px; /* Atur lebar maksimum untuk memaksa teks menjadi 3 baris */
+    line-height: 1.6; /* Tambahkan jarak antar baris untuk keterbacaan */
+    text-align: left; /* Rata kiri */
+    margin-top: 10px; /* Tambahkan jarak atas dari logo jika diperlukan */
+}
+
+.footer-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0071bc;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.footer-button:hover {
+    background-color: #205493;
+}
+
+.footer-links h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Subscribe Section */
+.footer-subscribe h4 {
+    text-align:right; /* Pastikan teks rata kiri */
+    margin-bottom: 10px; /* Tambahkan jarak di bawah judul */
+    font-size: 16px; /* Ukuran font untuk judul */
+    font-weight: bold; /* Tebalkan teks jika diperlukan */
+}
+
+.footer-subscribe p {
+    text-align: right; /* Rata kanan */
+    max-width: 300px; /* Batasi lebar teks agar menjadi 3 baris */
+    line-height: 1.6; /* Tambahkan jarak antar baris */
+    margin: 0; /* Hapus margin default */
+    margin-left: auto; /* Agar teks tetap di sisi kanan */
+    color: #ffffff; /* Warna teks */
+    font-size: 14px; /* Ukuran font */
+}
+
+.footer-subscribe form {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-subscribe input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+	margin-top: 80px;
+}
+
+.footer-subscribe button {
+    padding: 10px 20px;
+    background-color: #0071bc;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+	margin-top: 80px;
+}
+
+.footer-subscribe button:hover {
+    background-color: #205493;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
+@media (max-width: 1024px) {
+    /* Footer Top Responsiveness */
+    .footer-top {
+        flex-direction: column; /* Ubah ke tata letak vertikal */
+        gap: 20px; /* Tambahkan jarak antar elemen */
+        text-align: center; /* Semua elemen rata tengah */
+    }
+
+    .footer-item {
+        justify-content: center; /* Rata tengah ikon dan teks */
+    }
+
+    .footer-icon {
+        margin-right: 0; /* Hapus margin kanan */
+        margin-bottom: 10px; /* Tambahkan jarak bawah pada ikon */
+    }
+
+    /* Footer Middle Responsiveness */
+    .footer-middle {
+        flex-direction: column; /* Ubah ke tata letak vertikal */
+        gap: 30px; /* Tambahkan jarak antar elemen */
+        text-align: center; /* Semua elemen rata tengah */
+    }
+
+    .footer-logo,
+    .footer-links,
+    .footer-subscribe {
+        align-items: center; /* Elemen rata tengah */
+        text-align: center; /* Teks rata tengah */
+    }
+
+    .footer-links ul {
+        display: inline-block; /* Tampilkan sebagai blok */
+        text-align: center; /* Teks rata tengah */
+    }
+
+    .footer-subscribe form {
+        flex-direction: column; /* Formulir menjadi vertikal */
+        align-items: center; /* Elemen rata tengah */
+        gap: 15px; /* Tambahkan jarak antar elemen */
+    }
+
+    .footer-subscribe input,
+    .footer-subscribe button {
+        width: 100%; /* Buat lebar penuh */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Footer Padding */
+    .footer {
+        padding: 20px; /* Kurangi padding */
+    }
+
+    /* Footer Top for Small Screens */
+    .footer-top {
+        gap: 15px; /* Jarak antar elemen lebih kecil */
+    }
+
+    /* Footer Icon Size */
+    .footer-icon {
+        width: 60px; /* Ukuran ikon lebih kecil */
+    }
+
+    /* Footer Middle Adjustments */
+    .footer-middle {
+        gap: 20px; /* Tambahkan jarak antar elemen */
+    }
+
+    .footer-logo img {
+        height: 50px; /* Sesuaikan ukuran logo */
+    }
+
+    .footer-links h4 {
+        margin-bottom: 10px; /* Kurangi jarak bawah */
+    }
+
+    .footer-subscribe input,
+    .footer-subscribe button {
+        padding: 8px; /* Sesuaikan padding */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Footer Bottom for Very Small Screens */
+    .footer-bottom {
+        font-size: 12px; /* Ukuran font lebih kecil */
+        padding: 10px 0; /* Kurangi padding */
+    }
+
+    /* General Adjustments for Small Screens */
+    .footer-subscribe p {
+        font-size: 12px; /* Ukuran font lebih kecil */
+    }
+
+    .footer-logo p {
+        font-size: 12px; /* Ukuran font lebih kecil */
+        max-width: 250px; /* Batasi lebar untuk layar kecil */
+    }
+}
+
+.navigation-bar {
+    position: sticky; /* Buat elemen sticky */
+    top: 0; /* Tetapkan jarak dari atas */
+    z-index: 1000; /* Pastikan berada di atas elemen lainnya */
+    background-color: #ffffff; /* Warna latar belakang tetap */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Tambahkan sedikit bayangan */
+}
+
+.utility-link {
+    color: #ffffff; /* Warna teks */
+    text-decoration: none; /* Hilangkan garis bawah */
+}
+
+.utility-link:hover {
+    text-decoration: underline; /* Tampilkan garis bawah saat hover */
+    color: #aeb0b5; /* Warna biru saat hover */
+}

@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Details</title>
+    <!-- Link ke file CSS -->
+    <link href="Passport.css" rel="stylesheet" type="text/css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+	
+<body>
+   <!-- Utility Section -->
+    <div class="utility-bar">
+        <div class="utility-content">
+            <span class="utility-item">English</span>
+            <span class="utility-item">Login</span>
+            <span class="utility-item">
+				<a href="../Contact Section/Contact Section.html" class="utility-link">Contact</a>
+        </span>
+        </div>
+    </div>
+	
+	<!-- Navigation Section -->
+    <div class="navigation-bar">
+        <div class="navigation-content">
+            <!-- Logo -->
+            <div class="nav-logo">
+                <img src="img/LogoEng-CuwdmEVN.png" alt="logo" class="logo"/>
+            </div>
+
+            <!-- Menu Items -->
+            <div class="nav-menu">
+            <div class="nav-item dropdown">
+                <a href="#services" class="menu-link">Services</a>
+                <div class="submenu">
+                    <a href="../Project 3 Final Project/Final Project.html" class="submenu-item">Indonesia Overseas Card</a>
+                    <a href="#public-complaints" class="submenu-item">Public Complaints</a>
+                </div>
+            </div>
+            <a href="#map-service" class="nav-item">Map Service</a>
+            <a href="#report-news" class="nav-item">Report &amp; News</a>
+            <a href="#about-us" class="nav-item">About Us</a>
+        </div>
+
+            <!-- Search Bar -->
+            <div class="nav-search">
+                <input type="text" class="search-input" placeholder="Search...">
+                <button class="search-button">Search</button>
+            </div>
+        </div>
+    </div>
+	 <section class="appointment-system">
+        <div class="appointment-header">
+            <h1>Online Appointment System</h1>
+            <h2>Embassy of the Republic of Indonesia in Kuala Lumpur</h2>
+        </div>
+        <div class="services">
+            <h3>Select Services</h3>
+            <div class="service-list">
+                <div class="service-item">
+                    <div class="service-info">
+                        <h4>Service 1</h4>
+                        <h2>Passport</h2>
+                        <p>Passport Extension for Indonesian Citizens who have a Residence Permit</p>
+                    </div>
+                    <a href="#" class="apply-button">Apply now</a>
+                </div>
+                <div class="service-item">
+                    <div class="service-info">
+                        <h4>Service 2</h4>
+                        <h2>SPLP</h2>
+                        <p>Making a Travel Document in Lieu of a Passport</p>
+                    </div>
+                    <a href="#" class="apply-button">Apply now</a>
+                </div>
+                <div class="service-item">
+                    <div class="service-info">
+                        <h4>Service 3</h4>
+                        <h2>SKCK</h2>
+                        <p>Registration of Police Record Certificate (SKCK) Application for Indonesian and Foreigners</p>
+                    </div>
+                    <a href="#" class="apply-button">Apply now</a>
+                </div>
+                <div class="service-item">
+                    <div class="service-info">
+                        <h4>Service 4</h4>
+                        <h2>NIT</h2>
+                        <p>Services for making Indonesian Single Identification Numbers Abroad</p>
+                    </div>
+                    <a href="#" class="apply-button">Apply now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+	<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const discoverLink = document.querySelector('.discover-link');
+    const overseasCardLink = document.querySelector('.submenu-overseas-card');
+
+    if (discoverLink) {
+      discoverLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        window.location.href = './discover-service/index.html';
+      });
+    }
+
+    if (overseasCardLink) {
+      overseasCardLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        window.location.href = './home/index.html#citizen-services';
+      });
+    }
+  });
+</script>
+
+</body>
+	
+<footer class="footer">
+    <!-- Footer Top -->
+    <div class="footer-top">
+        <div class="footer-item">
+            <img src="img/world-05.png" alt="Address Icon" class="footer-icon address-icon">
+            <div>
+                <h4>Address</h4>
+                <p>6 Taman Pejabat, Jakarta Pusat, Indonesia</p>
+            </div>
+        </div>
+        <div class="footer-item">
+            <img src="img/contact-06.png" alt="Contact Icon" class="footer-icon contact-icon">
+            <div>
+                <h4>Contact</h4>
+                <p>kontak-kami@kemlu.go.id<br>(+62 21) 344 1508</p>
+            </div>
+        </div>
+        <div class="footer-item">
+            <img src="img/clock-07.png" alt="Clock Icon" class="footer-icon clock-icon">
+            <div>
+                <h4>Opening Hours</h4>
+                <p>Mon-Sat 8am - 5pm<br>Saturday-Sunday: Closed</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Middle -->
+    <div class="footer-middle">
+        <div class="footer-logo">
+            <img src="img/LogoEng-CuwdmEVN.png" alt="Ministry of Foreign Affairs Logo" class="footer-icon logo-icon">
+            <p>Indonesia's Ministry of Foreign Affairs fosters diplomacy, global partnerships, and safeguards the nation with integrity.</p>
+            <a href="#" class="footer-button">Know More</a>
+        </div>
+        <div class="footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Services</a></li>
+                <li><a href="#">Statements</a></li>
+                <li><a href="#">Latest News</a></li>
+                <li><a href="../Contact Section/Contact Section.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-subscribe">
+            <h4>News &amp; Updates</h4>
+            <p>Get Kemlu’s latest news, updates, and insights on diplomacy delivered to your inbox.</p>
+            <form action="#" method="post">
+                <input type="email" placeholder="Your Email Address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <p>© 2025 Ministry of Foreign Affairs, Republic of Indonesia. All rights reserved.</p>
+    </div>
+</footer>
+</html>
